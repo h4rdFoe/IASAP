@@ -1,0 +1,212 @@
+<!doctype html>
+
+<html lang="ru">
+
+<head>
+  <!--Import Google Icon Font-->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <!--Import materialize.css-->
+  <link type="text/css" rel="stylesheet" href="css/materialize.css" media="screen,projection" />
+  <!--Let browser know website is optimized for mobile-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="css/main.css">
+  <meta charset="utf-8">
+  <title>Административная панель</title>
+  <link rel="icon" type="image/x-icon" href="img/logo-langing.ico">
+</head>
+
+<body>
+
+  <div id="org" class="modal modal-fixed-footer">
+    <div class="modal-content">
+      <h6>Объединение организаций</h6>
+      <hr>
+      <div class="row">
+        <div class="input-field col s12">
+          <select>
+            <option value="" disabled selected>Выбрать головную организацию</option>
+            <option value="1">1</option>
+            <option value="2">1</option>
+            <option value="3">1</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="row">
+        <form action="#">
+          <p>
+            <label>
+              <input type="checkbox" checked="checked" />
+              <span>Объединить объёмы койко-мест</span>
+            </label>
+          </p>
+          <p>
+            <label>
+              <input type="checkbox">
+              <span>Объединить заявки</span>
+            </label>
+          </p>
+        </form>
+      </div>
+
+    </div>
+    <div class="modal-footer">
+      <a href="#!" class="modal-close waves-effect waves-green btn-flat">Отмена</a>
+      <a href="#test_modal" class="waves-effect waves-green btn-flat modal-trigger">Сохранить</a>
+    </div>
+  </div>
+
+  <div id="test_modal" class="modal">
+    <div class="modal-content">
+      <h4>Подтвердите действия</h4>
+      <p>Вы уверены, что хотите объединить объёмы койко-мест и заявки следующих организаций: (список организаций,
+        выбранных на странице Организации (выводить в виде маркированного списка)), и сделать головной организацией
+        (выводить наименование организации, выбранной головной)?</p>
+    </div>
+    <div class="modal-footer">
+      <a href="#!" class="modal-close waves-effect waves-green btn-flat">Отмена</a>
+      <a href="#!" class="modal-close waves-effect waves-green btn-flat">ОК</a>
+    </div>
+  </div>
+
+
+  <nav style="margin-bottom: 12px">
+    <div class="nav-wrapper blue-grey darken-3">
+      <a class="breadcrumb">СКЛ</a>
+      <a href="#" class="breadcrumb">Организации</a>
+      <a href="">
+        <div class="alink brand-logo right">
+          <span><b>IASAP</b></span>
+          <img class="right logo-egisz" src="img/logo.png">
+        </div>
+      </a>
+      <a href="#" data-target="slide-out" class="alink sidenav-trigger"><i class="medium material-icons">memory</i></a>
+    </div>
+  </nav>
+
+  <ul id="slide-out" class="sidenav">
+    <li>
+      <div class="user-view">
+        <div class="background blue-grey darken-3"></div>
+        <a href="#name"><span class="white-text name">Петров П.П.</span></a>
+        <a href="" class="white-text right tooltipped" data-tooltip="Выйти"><i
+            class="material-icons">exit_to_app</i></a>
+        <a href="#email"><span class="white-text email">petrov@gmail.com</span></a>
+      </div>
+    </li>
+    <li><a class="dropdown-trigger" href="#!" data-target="dropdown1"><i class="material-icons">language</i>Стенд<i
+          class="material-icons right">arrow_drop_down</i></a></li>
+    <ul id='dropdown1' class='dropdown-content'>
+      <li><a href="#!">DEV</a></li>
+      <li><a href="#!">TEST</a></li>
+      <li><a href="#!">PROD</a></li>
+    </ul>
+    <li><a href="dictionary.html">Справочники</a></li>
+    <li><a href="#!">Мониторинг</a></li>
+    <ul class="collapsible">
+      <li>
+        <div class="collapsible-header"><i class="material-icons">grain</i>ВМП</div>
+        <div class="collapsible-body">
+          <a href="vmp_pgg.html">Управление ПГГ</a>
+        </div>
+      </li>
+      <li>
+        <div class="collapsible-header"><i class="material-icons">grain</i>СКЛ</div>
+        <div class="collapsible-body">Государственное задание</div>
+        <div class="collapsible-body">Организации</div>
+      </li>
+      <li>
+        <div class="collapsible-header"><i class="material-icons">grain</i>ДС</div>
+        <div class="collapsible-body"> Пока пусто
+        </div>
+      </li>
+    </ul>
+  </ul>
+
+  <div class="row mobile_margin">
+    <div class="z-depth-2 main_content col l11 s12 push-l0">
+      <div class="row" style="padding-top: 20px">
+        <div class="col s12">
+          <a onclick="M.toast({html: 'Запись добавлена'})" class="waves-effect waves-light btn orange">Добавить</a>
+          <a class="waves-effect waves-light btn orange">Редактировать</a>
+          <a onclick="M.toast({html: 'Изменения сохранены'})" class="waves-effect waves-light btn orange">Сохранить</a>
+          <a onclick="M.toast({html: 'Запись удалена'})" class="waves-effect waves-light btn orange">Удалить</a>
+          <a class="waves-effect waves-light btn orange modal-trigger" href="#org">Объединить</a>
+        </div>
+      </div>
+      <hr>
+      <div class="row">
+        <div class="col s12">
+          <table id="search" class="responsive-table">
+            <thead>
+              <tr>
+                <th></th>
+                <th>OID<i class="material-icons tiny right">filter_list</i></th>
+                <th>Наименование<i class="material-icons tiny right">filter_list</i></th>
+                <th>Тип организации<i class="material-icons tiny right">filter_list</i></th>
+                <th>ОКПО</th>
+                <th>Телефон</th>
+                <th>Факс</th>
+                <th>E-mail</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><label><input type="checkbox" /><span></span></label></td>
+                <td class="col1">1.2.643.5.1.13.13.12.2.77.7799</td>
+                <td class="col2">ФГБУ КС "Советск" Минздрава России (Калининградская область, г. Советск)</td>
+                <td class="col3">Санаторно-курортная организация</td>
+                <td class="col4">76844019</td>
+                <td class="col5">88005553535</td>
+                <td class="col6">88121234567</td>
+                <td class="col7">sobaka@mail.ru</td>
+              </tr>
+              <tr>
+                <td><label><input type="checkbox" /><span></span></label></td>
+                <td><input type="text" value=""></td>
+                <td></td>
+                <td>
+                  <div class="input-field">
+                    <select>
+                      <option value="" disabled selected>Выбрать тип организации</option>
+                      <option value="1">Санаторно-курортная организация</option>
+                      <option value="2">Медицинская организация</option>
+                      <option value="3">Учреждения Минобрнауки</option>
+                    </select>
+                  </div>
+                </td>
+                <td><input type="text" value=""></td>
+                <td><input type="text" value=""></td>
+                <td><input type="text" value=""></td>
+                <td><input type="text" value=""></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <ul class="pagination center">
+        <li class="waves-effect"><a href="#!"><i class="material-icons">chevron_left</i></a></li>
+        <li class="active orange"><a href="#!">1</a></li>
+        <li class="waves-effect"><a href="#!">2</a></li>
+        <li class="waves-effect"><a href="#!">3</a></li>
+        <li>...</li>
+        <li class="waves-effect"><a href="#!">10</a></li>
+        <li class="waves-effect"><a href="#!"><i class="material-icons">chevron_right</i></a></li>
+      </ul>
+      <div class="row">
+        <div class="col s12">
+          <div style="margin: 5px 5px 0 0;" class="right"><b>145 организаций</b></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+  <!--JavaScript at end of body for optimized loading-->
+  <script type="text/javascript" src="js/materialize.js"></script>
+  <script type="text/javascript" src="js/main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,205 @@
+<!doctype html>
+
+<html lang="ru">
+
+<head>
+  <!--Import Google Icon Font-->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <!--Import materialize.css-->
+  <link type="text/css" rel="stylesheet" href="css/materialize.css" media="screen,projection" />
+  <!--Let browser know website is optimized for mobile-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="css/main.css">
+  <meta charset="utf-8">
+  <title>Административная панель</title>
+  <link rel="icon" type="image/x-icon" href="img/logo-langing.ico">
+</head>
+
+<body>
+  <nav style="margin-bottom: 12px">
+    <div class="nav-wrapper blue-grey darken-3">
+      <a class="breadcrumb">ДС</a>
+      <a href="#" class="breadcrumb">Обязательные исследования по возрастам</a>
+      <a href="">
+        <div class="alink brand-logo right">
+          <span><b>IASAP</b></span>
+          <img class="right logo-egisz" src="img/logo.png">
+        </div>
+      </a>
+      <a href="#" data-target="slide-out" class="alink sidenav-trigger"><i class="medium material-icons">memory</i></a>
+    </div>
+  </nav>
+
+  <ul id="slide-out" class="sidenav">
+    <li>
+      <div class="user-view">
+        <div class="background blue-grey darken-3"></div>
+        <a href="#name"><span class="white-text name">Петров П.П.</span></a>
+        <a href="" class="white-text right tooltipped" data-tooltip="Выйти"><i
+            class="material-icons">exit_to_app</i></a>
+        <a href="#email"><span class="white-text email">petrov@gmail.com</span></a>
+      </div>
+    </li>
+    <li><a class="dropdown-trigger" href="#!" data-target="dropdown1"><i class="material-icons">language</i>Стенд<i
+          class="material-icons right">arrow_drop_down</i></a></li>
+    <ul id='dropdown1' class='dropdown-content'>
+      <li><a href="#!">DEV</a></li>
+      <li><a href="#!">TEST</a></li>
+      <li><a href="#!">PROD</a></li>
+    </ul>
+    <li><a href="dictionary.html">Справочники</a></li>
+    <li><a href="#!">Мониторинг</a></li>
+    <ul class="collapsible">
+      <li>
+        <div class="collapsible-header"><i class="material-icons">grain</i>ВМП</div>
+        <div class="collapsible-body"> Пока пусто
+        </div>
+      </li>
+      <li>
+        <div class="collapsible-header"><i class="material-icons">grain</i>СКЛ</div>
+        <div class="collapsible-body"> Пока пусто
+        </div>
+      </li>
+      <li>
+        <div class="collapsible-header"><i class="material-icons">grain</i>ДС</div>
+        <div class="collapsible-body">
+          <a href="ds_doctor_age.html">Осмотры врачей по возрастам</a>
+          <a href="ds_exam_age.html">Исследования по возрастам</a>
+        </div>
+      </li>
+    </ul>
+  </ul>
+
+  <div class="row mobile_margin">
+    <div class="z-depth-2 main_content col l8 s12 push-l2">
+      <div class="row" style="padding-top: 20px">
+        <div class="col s4 input-field">
+          <select>
+            <option value="" disabled selected>2 года</option>
+            <option value="1">Новорожденный</option>
+            <option value="2">1 месяц</option>
+            <option value="3">2 месяца</option>
+            <option value="4">6 месяцев</option>
+            <option value="5">12 месяцев</option>
+            <option value="6" selected>2 года</option>
+            <option value="7">17 лет</option>
+          </select>
+          <label style="padding-left: 10px">Возрастная группа</label>
+        </div>
+        <form action="#">
+          <div class="col s3 input-field">
+            <label>
+              <input name="group1" type="radio" checked />
+              <span>Карта диспансеризации</span>
+            </label>
+          </div>
+          <div class="col s4 input-field" style="padding-left: 20px">
+            <label>
+              <input name="group1" type="radio" />
+              <span>Профилактический осмотр</span>
+            </label>
+          </div>
+        </form>
+      </div>
+      <div class="row">
+        <div class="col s12">
+          <a class="waves-effect waves-light btn orange">Обновить</a>
+        </div>
+      </div>
+      <hr>
+      <div class="row">
+        <div class="col s12 input-field" style="padding-top: 20px">
+          <form action="#">
+            <label>
+              <input name="group1" type="radio" checked />
+              <span>Активные записи</span>
+            </label>
+            <label>
+              <input name="group1" type="radio" />
+              <span>Неактивные записи</span>
+            </label>
+          </form>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col s12">
+          <a class="waves-effect waves-light btn orange">Редактировать</a>
+          <a class="waves-effect waves-light btn orange">Сбросить</a>
+          <a class="waves-effect waves-light btn orange">Сохранить</a>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col s12">
+          <table class="responsive-table highlight">
+            <thead>
+              <tr>
+                <th></th>
+                <th>Исследование</th>
+                <th>Дата начала</th>
+                <th>Дата окончания</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td></td>
+                <td>Общий анализ крови</td>
+                <td>01.01.2012</td>
+                <td></td>
+              </tr>
+              <tr>
+                <td></td>
+                <td>Клинический анализ крови</td>
+                <td>01.06.2016</td>
+                <td>31.12.2020</td>
+              </tr>
+              <tr>
+                <td></td>
+                <td>Исследование уровня глюкозы в крови</td>
+                <td>01.02.2015</td>
+                <td>31.12.2022</td>
+              </tr>
+              <tr>
+                <td></td>
+                <td>Нейросонография</td>
+                <td>01.06.2014</td>
+                <td>01.01.2027</td>
+              </tr>
+              <tr>
+                <td></td>
+                <td>Флюорография лёгких</td>
+                <td><input type="text"></td>
+                <td><input type="text"></td>
+              </tr>
+              <tr>
+                <td></td>
+                <td>Электрокардиография</td>
+                <td><input type="text"></td>
+                <td><input type="text"></td>
+              </tr>
+              <tr>
+                <td></td>
+                <td>Эхокардиография</td>
+                <td><input type="text"></td>
+                <td><input type="text"></td>
+              </tr>
+              <tr>
+                <td></td>
+                <td>Аудиологический скрининг</td>
+                <td><input type="text"></td>
+                <td><input type="text"></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+  <!--JavaScript at end of body for optimized loading-->
+  <script type="text/javascript" src="js/materialize.js"></script>
+  <script type="text/javascript" src="js/main.js"></script>
+</body>
+
+</html>

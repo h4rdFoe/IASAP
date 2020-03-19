@@ -1,0 +1,96 @@
+body {
+    background: url(background-5.svg);
+    background-size: 100%;
+    background-position-y: 9%;
+    background-color: #b0bec5;
+}
+
+@media only screen and (min-width: 993px) {
+    nav a.sidenav-trigger {
+      display: flex;
+    }
+    .row .col.push-l0 {
+      left: 4.1666666666%;
+    }
+  }
+
+.logo-egisz{
+    height: 50px;
+    padding-top: 10px;
+    padding-left: 5px;
+}
+
+i.medium {
+  font-size: 4rem !important;
+}
+.main_content{
+  background-color: white; 
+  border-radius: 2px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#search tbody tr:hover {
+  background: #e0f2f1;
+ }
+
+.alink {
+  transition: 0.1s linear; /* Время изменения */
+}
+ 
+.alink:hover {
+  color: #ff9800;
+  transition: 0.1s linear; /* Цвет текста */
+}
+
+[type="radio"]:checked + span:after,
+[type="radio"].with-gap:checked + span:before,
+[type="radio"].with-gap:checked + span:after {
+  border: 2px solid #ff9800;
+}
+
+[type="radio"]:checked + span:after,
+[type="radio"].with-gap:checked + span:after {
+  background-color: #ff9800;
+}
+
+.collection .collection-item.active {
+  background-color: #607d8b;
+}
+
+.collection a.collection-item {
+  color: #607d8b;
+}
+
+.collection .collection-item {
+  line-height: 1;
+  padding: 10px 10px;
+}
+
+.collection {
+  border-radius: 10px;
+}
+
+.dropdown-content li > a, .dropdown-content li > span {
+  color: #607d8b;
+}
+
+.sidenav .collapsible-body{
+  padding-left: 2rem
+}
+
+.collapsible-body a{
+  color: rgba(0, 0, 0, 0.87);
+}
+
+.col1 {
+  width: 20%
+}
+
+.col2 {
+  width: 70%
+}
+
+.col3 {
+  width: 10%
+}

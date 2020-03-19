@@ -1,0 +1,249 @@
+<!doctype html>
+
+<html lang="ru">
+
+<head>
+  <!--Import Google Icon Font-->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <!--Import materialize.css-->
+  <link type="text/css" rel="stylesheet" href="css/materialize.css" media="screen,projection" />
+  <!--Let browser know website is optimized for mobile-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="css/main.css">
+  <meta charset="utf-8">
+  <title>Административная панель</title>
+  <link rel="icon" type="image/x-icon" href="img/logo-langing.ico">
+</head>
+
+<body>
+  <nav style="margin-bottom: 12px">
+    <div class="nav-wrapper blue-grey darken-3">
+      <a class="breadcrumb">СКЛ</a>
+      <a href="#" class="breadcrumb">Государственное задание</a>
+      <a href="">
+        <div class="alink brand-logo right">
+          <span><b>IASAP</b></span>
+          <img class="right logo-egisz" src="img/logo.png">
+        </div>
+      </a>
+      <a href="#" data-target="slide-out" class="alink sidenav-trigger"><i class="medium material-icons">memory</i></a>
+    </div>
+  </nav>
+
+  <ul id="slide-out" class="sidenav">
+    <li>
+      <div class="user-view">
+        <div class="background blue-grey darken-3"></div>
+        <a href="#name"><span class="white-text name">Петров П.П.</span></a>
+        <a href="" class="white-text right tooltipped" data-tooltip="Выйти"><i
+            class="material-icons">exit_to_app</i></a>
+        <a href="#email"><span class="white-text email">petrov@gmail.com</span></a>
+      </div>
+    </li>
+    <li><a class="dropdown-trigger" href="#!" data-target="dropdown1"><i class="material-icons">language</i>Стенд<i
+          class="material-icons right">arrow_drop_down</i></a></li>
+    <ul id='dropdown1' class='dropdown-content'>
+      <li><a href="#!">DEV</a></li>
+      <li><a href="#!">TEST</a></li>
+      <li><a href="#!">PROD</a></li>
+    </ul>
+    <li><a href="dictionary.html">Справочники</a></li>
+    <li><a href="#!">Мониторинг</a></li>
+    <ul class="collapsible">
+      <li>
+        <div class="collapsible-header"><i class="material-icons">grain</i>ВМП</div>
+        <div class="collapsible-body">
+          <a href="vmp_pgg.html">Управление ПГГ</a>
+        </div>
+      </li>
+      <li>
+        <div class="collapsible-header"><i class="material-icons">grain</i>СКЛ</div>
+        <div class="collapsible-body">Государственное задание</div>
+      </li>
+      <li>
+        <div class="collapsible-header"><i class="material-icons">grain</i>ДС</div>
+        <div class="collapsible-body"> Пока пусто
+        </div>
+      </li>
+    </ul>
+  </ul>
+
+  <div class="row mobile_margin">
+    <div class="z-depth-2 main_content col l11 s12 push-l0">
+      <div class="section">
+        <h6>Корректировка объемов</h6>
+        <div class="row">
+          <div class="input-field col l2 s12">
+            <select>
+              <option value="1">Версия 1</option>
+              <option value="2">Версия 2</option>
+              <option value="3" selected>Версия 3</option>
+            </select>
+            <label>Версия</label>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col s12">
+            <table>
+              <thead>
+                <tr>
+                  <th></th>
+                  <th>OID</th>
+                  <th>СКО</th>
+                  <th>Койко-дни</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><label><input type="checkbox" /><span></span></label></td>
+                  <td class="col1">1.2.643.5.1.13.13.12.2.77.7799</td>
+                  <td class="col2">ФГБУ КС "Советск" Минздрава России (Калининградская область, г. Советск)</td>
+                  <td class="col3"><input type="text" value="61"></td>
+                </tr>
+                <tr>
+                  <td><label><input type="checkbox" /><span></span></label></td>
+                  <td class="col1">1.2.643.5.1.13.13.12.2.77.7799</td>
+                  <td class="col2">ФГБУ санаторий «Лесное» Минздрава России (Самарская область, г. Тольятти)</td>
+                  <td class="col3"><input type="text" value="61"></td>
+                </tr>
+                <tr>
+                  <td><label><input type="checkbox" /><span></span></label></td>
+                  <td class="col1">1.2.643.5.1.13.13.12.2.77.7799</td>
+                  <td class="col2">ФГБУ КС "Советск" Минздрава России (Калининградская область, г. Советск)</td>
+                  <td class="col3"><input type="text" value="61"></td>
+                </tr>
+                <tr>
+                  <td><label><input type="checkbox" /><span></span></label></td>
+                  <td class="col1">1.2.643.5.1.13.13.12.2.77.7799</td>
+                  <td class="col2">ФГБУ КС "Советск" Минздрава России (Калининградская область, г. Советск)</td>
+                  <td class="col3"><input type="text" value="61"></td>
+                </tr>
+                <tr>
+                  <td><label><input type="checkbox" /><span></span></label></td>
+                  <td class="col1"><input type="text"></td>
+                  <td class="col2"></td>
+                  <td class="col3"><input type="text"></td>
+                </tr>
+              </tbody>
+              <tfoot>
+                <tr>
+                  <th></th>
+                  <th>OID</th>
+                  <th>СКО</th>
+                  <th>Койко-дни</th>
+                </tr>
+              </tfoot>
+            </table>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col s12">
+            <a onclick="M.toast({html: 'Объемы удалены'})" class="waves-effect waves-light btn orange">Удалить</a>
+            <a onclick="M.toast({html: 'Строка добавлена'})" class="waves-effect waves-light btn orange">Добавить</a>
+            <a onclick="M.toast({html: 'Изменения сохранены'})"
+              class="waves-effect waves-light btn orange">Сохранить</a>
+          </div>
+        </div>
+      </div>
+      <div class="section">
+        <h6>Загрузка объемов</h6>
+        <div class="row">
+          <div class="input-field col l4 s12">
+            <form action="#">
+              <div class="file-field input-field">
+                <div class="btn orange">
+                  <span>Выбрать</span>
+                  <input type="file">
+                </div>
+                <div class="file-path-wrapper">
+                  <input class="file-path validate" type="text" placeholder="Выберите Excel файл">
+                </div>
+              </div>
+            </form>
+          </div>
+          <div class="input-field col l2 s12" style="margin-top: 30px">
+            <select>
+              <option value="1">Версия 1</option>
+              <option value="2">Версия 2</option>
+              <option value="3" selected>Версия 3</option>
+            </select>
+            <label>Версия</label>
+          </div>
+          <div class="input-field col l2 s12" style="margin-top: 30px">
+            <a onclick="M.toast({html: 'Объемы загружены'})" class="waves-effect waves-light btn orange">Загрузить</a>
+          </div>
+        </div>
+      </div>
+      <div class="divider"></div>
+      <div class="section">
+        <div class="row">
+          <div class="input-field col l6 s12">
+            <h6>Создание версии</h6>
+            <div class="row">
+              <div class="input-field col l4 s12">
+                <select>
+                  <option selected value="1">2020</option>
+                  <option value="2">2019</option>
+                  <option value="3">2018</option>
+                </select>
+                <label>Год</label>
+              </div>
+              <div class="input-field col l4 s12">
+                <select>
+                  <option selected value="1">Корректировка</option>
+                  <option value="2">План</option>
+                </select>
+                <label>Тип</label>
+              </div>
+              <div class="input-field col l4 s12">
+                <a onclick="M.toast({html: 'Версия создана'})" class="waves-effect waves-light btn orange">Создать</a>
+              </div>
+            </div>
+          </div>
+          <div class="input-field col l6 s12">
+            <h6>Удаление версии</h6>
+            <div class="row">
+              <div class="input-field col l4 s12">
+                <select>
+                  <option value="" disabled selected>Выберите версию</option>
+                  <option value="1">Версия 1</option>
+                  <option value="2">Версия 2</option>
+                  <option value="3">Версия 3</option>
+                </select>
+                <label>Версия</label>
+              </div>
+              <div class="input-field col l4 s12">
+                <a onclick="M.toast({html: 'Версия удалена'})" class="waves-effect waves-light btn orange">Удалить</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="divider"></div>
+      <div class="section">
+        <div class="row">
+          <div class="input-field col s12">
+            <h6>Управление</h6>
+            <div class="row">
+              <div class="switch" style="padding-top: 20px;">
+                <label>
+                  <input checked type="checkbox">
+                  <span class="lever"></span>
+                </label>
+                <label style="font-size: 1rem;">Ограничение на непрывышение объёмов</label>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+  <!--JavaScript at end of body for optimized loading-->
+  <script type="text/javascript" src="js/materialize.js"></script>
+  <script type="text/javascript" src="js/main.js"></script>
+</body>
+
+</html>

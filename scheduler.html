@@ -1,0 +1,198 @@
+<!doctype html>
+
+<html lang="ru">
+
+<head>
+  <!--Import Google Icon Font-->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <!--Import materialize.css-->
+  <link type="text/css" rel="stylesheet" href="css/materialize.css" media="screen,projection" />
+  <!--Let browser know website is optimized for mobile-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="css/main.css">
+  <meta charset="utf-8">
+  <title>Административная панель</title>
+  <link rel="icon" type="image/x-icon" href="img/logo-langing.ico">
+</head>
+
+<body>
+  <!-- Добавить -->
+  <div id="dic" class="modal">
+    <div class="modal-content">
+      <h6>Расписание</h6>
+      <hr>
+      <div class="row">
+        <div class="input-field col l4 s12">
+          <input required type="text" class="timepicker">
+          <label>Время</label>
+        </div>
+        <div class="input-field col l4 s12">
+          <input required type="text" class="datepicker">
+          <label>Начало</label>
+        </div>
+        <div class="input-field col l4 s12">
+          <input required type="text" class="datepicker">
+          <label>Окончание</label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col l2 s12">
+          <input id="per" type="text" class="validate">
+          <label for="per">Период(час)</label>
+        </div>
+        <div class="input-field col l10 s12">
+          <input required id="NAME" type="text" class="validate">
+          <label for="NAME">Наименование</label>
+          <span class="helper-text" data-error="Введите наименование"></span>
+        </div>
+      </div>
+    </div>
+    <div class="modal-footer">
+      <a href="#!" class="modal-close waves-effect waves-green btn-flat">Отмена</a>
+      <a href="#!" class="modal-close waves-effect waves-green btn-flat">Сохранить</a>
+    </div>
+  </div>
+
+  <nav style="margin-bottom: 12px">
+    <div class="nav-wrapper blue-grey darken-3">
+      <a href="dictionary.html" class="breadcrumb">Справочники</a>
+      <a href="#" class="breadcrumb">Планировщик</a>
+      <a href="">
+        <div class="alink brand-logo right">
+          <span><b>IASAP</b></span>
+          <img class="right logo-egisz" src="img/logo.png">
+        </div>
+      </a>
+      <a href="#" data-target="slide-out" class="alink sidenav-trigger"><i class="medium material-icons">memory</i></a>
+    </div>
+  </nav>
+
+  <ul id="slide-out" class="sidenav">
+    <li>
+      <div class="user-view">
+        <div class="background blue-grey darken-3"></div>
+        <a href="#name"><span class="white-text name">Петров П.П.</span></a>
+        <a href="" class="white-text right tooltipped" data-tooltip="Выйти"><i
+            class="material-icons">exit_to_app</i></a>
+        <a href="#email"><span class="white-text email">petrov@gmail.com</span></a>
+      </div>
+    </li>
+    <li><a class="dropdown-trigger" href="#!" data-target="dropdown1"><i class="material-icons">language</i>Стенд<i
+          class="material-icons right">arrow_drop_down</i></a></li>
+    <ul id='dropdown1' class='dropdown-content'>
+      <li><a href="#!">DEV</a></li>
+      <li><a href="#!">TEST</a></li>
+      <li><a href="#!">PROD</a></li>
+    </ul>
+    <li><a href="dictionary.html">Справочники</a></li>
+    <li><a href="#!">Мониторинг</a></li>
+    <ul class="collapsible">
+      <li>
+        <div class="collapsible-header"><i class="material-icons">grain</i>ВМП</div>
+        <div class="collapsible-body">
+          <a href="vmp_pgg.html">Управление ПГГ</a>
+        </div>
+      </li>
+      <li>
+        <div class="collapsible-header"><i class="material-icons">grain</i>СКЛ</div>
+        <div class="collapsible-body"> Пока пусто
+        </div>
+      </li>
+      <li>
+        <div class="collapsible-header"><i class="material-icons">grain</i>ДС</div>
+        <div class="collapsible-body"> Пока пусто
+        </div>
+      </li>
+    </ul>
+  </ul>
+
+  <div class="row mobile_margin">
+    <div class="z-depth-2 main_content col l11 s12 push-l0">
+      <div class="row" style="padding-top: 20px">
+        <div class="col s12">
+          <a class="btn-floating btn-medium waves-effect waves-light orange lighten-1 modal-trigger tooltipped"
+            data-tooltip="Добавить" href="#dic"><i class="material-icons">add</i></a>
+          <a class="btn-floating btn-medium waves-effect waves-light orange lighten-1 modal-trigger tooltipped"
+            data-tooltip="Изменить" href="#dic"><i class="material-icons">edit</i></a>
+          <a class="btn-floating btn-medium waves-effect waves-light orange lighten-1 tooltipped"
+            data-tooltip="Удалить"><i class="material-icons">delete</i></a>
+        </div>
+      </div>
+      <hr>
+      <div class="row">
+        <div class="col s12">
+          <table id="search" class="responsive-table">
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>Наименование</th>
+                <th>Время</th>
+                <th>Повтор</th>
+                <th>Период(час)</th>
+                <th>Начало</th>
+                <th>Окончание</th>
+                <th>Последний запуск</th>
+                <th>Справочники</th>
+              </tr>
+            </thead>
+
+            <tbody>
+              <tr>
+                <td>382</td>
+                <td>Каждый день в 23:55</td>
+                <td>23:55</td>
+                <td>Да</td>
+                <td>24</td>
+                <td>21.03.2019</td>
+                <td>21.09.2019</td>
+                <td>02.08.2019 23:55</td>
+                <td>1.2.643.5.1.13.13.11.1461, 1.2.643.5.1.13.2.1.1.635</td>
+              </tr>
+              <tr>
+                <td>382</td>
+                <td>Каждый день в 23:55</td>
+                <td>23:55</td>
+                <td>Да</td>
+                <td>24</td>
+                <td>21.03.2019</td>
+                <td>21.09.2019</td>
+                <td>02.08.2019 23:55</td>
+                <td>1.2.643.5.1.13.13.11.1461, 1.2.643.5.1.13.2.1.1.635</td>
+              </tr>
+              <tr>
+                <td>382</td>
+                <td>Каждый день в 23:55</td>
+                <td>23:55</td>
+                <td>Да</td>
+                <td>24</td>
+                <td>21.03.2019</td>
+                <td>21.09.2019</td>
+                <td>02.08.2019 23:55</td>
+                <td>1.2.643.5.1.13.13.11.1461, 1.2.643.5.1.13.2.1.1.635</td>
+              </tr>
+              <tr>
+                <td>382</td>
+                <td>Каждый день в 23:55</td>
+                <td>23:55</td>
+                <td>Да</td>
+                <td>24</td>
+                <td>21.03.2019</td>
+                <td>21.09.2019</td>
+                <td>02.08.2019 23:55</td>
+                <td>1.2.643.5.1.13.13.11.1461, 1.2.643.5.1.13.2.1.1.635</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+  <!--JavaScript at end of body for optimized loading-->
+  <script type="text/javascript" src="js/materialize.js"></script>
+  <script type="text/javascript" src="js/main.js"></script>
+</body>
+
+</html>

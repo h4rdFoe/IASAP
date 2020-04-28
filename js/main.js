@@ -38,11 +38,11 @@ document.addEventListener('DOMContentLoaded', function() {
 
 $('.chips').chips();
 $('#vid_lech').chips({
-  placeholder: 'Вид лечения',
+  placeholder: 'Вид лечения *',
   secondaryPlaceholder: '+Вид',
 });
 $('#mkb').chips({
-  placeholder: 'МКБ-10',
+  placeholder: 'МКБ-10 *',
   secondaryPlaceholder: '+МКБ',
   autocompleteOptions: {
     data: {

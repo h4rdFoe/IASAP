@@ -29,7 +29,7 @@
         </div>
         <div class="input-field col l10 s12">
           <input required id="name_profile" type="text" class="validate">
-          <label for="name_profile">Наименование</label>
+          <label for="name_profile">Наименование <span class="red-text">*</span></label>
           <span class="helper-text" data-error="Введите наименование"></span>
         </div>
       </div>
@@ -47,6 +47,16 @@
       <h6>Модель</h6>
       <hr>
       <div class="row">
+        <div class="input-field col s12">
+          <select>
+            <option selected value="1">1</option>
+            <option value="2">1</option>
+            <option value="3">1</option>
+          </select>
+          <label>Вид ВМП <span class="red-text">*</span></label>
+        </div>
+      </div>
+      <div class="row">
         <div class="input-field col l2 s12">
           <input required id="code_model" type="text" class="validate">
           <label for="code_model">Код</label>
@@ -54,13 +64,14 @@
         </div>
         <div class="input-field col l10 s12">
           <textarea required id="name_model" class="materialize-textarea validate"></textarea>
-          <label for="name_model">Наименование</label>
+          <label for="name_model">Наименование <span class="red-text">*</span></label>
           <span class="helper-text" data-error="Введите наименование"></span>
         </div>
       </div>
       <div class="row">
-        <div class="col s12">
-          <div id="vid_lech" class="chips"></div>
+        <div class="input-field col s12">
+          <input required id="vid_lech" type="text" class="validate">
+          <label for="vid_lech">Вид лечения <span class="red-text">*</span></label>
         </div>
       </div>
       <div class="row">
@@ -82,6 +93,16 @@
       <h6>Метод</h6>
       <hr>
       <div class="row">
+        <div class="input-field col s12">
+          <select>
+            <option selected value="1">1</option>
+            <option value="2">1</option>
+            <option value="3">1</option>
+          </select>
+          <label>Модель ВМП <span class="red-text">*</span></label>
+        </div>
+      </div>
+      <div class="row">
         <div class="input-field col l2 s12">
           <input required id="code_method" type="text" class="validate">
           <label for="code_method">Код</label>
@@ -89,7 +110,7 @@
         </div>
         <div class="input-field col l10 s12">
           <textarea required id="name_method" class="materialize-textarea validate"></textarea>
-          <label for="name_method">Наименование</label>
+          <label for="name_method">Наименование <span class="red-text">*</span></label>
           <span class="helper-text" data-error="Введите наименование"></span>
         </div>
       </div>
@@ -107,41 +128,43 @@
       <h6>Вид</h6>
       <hr>
       <div class="row">
+        <div class="input-field col s12">
+          <select>
+            <option selected value="1">1</option>
+            <option value="2">1</option>
+            <option value="3">1</option>
+          </select>
+          <label>Профиль ВМП <span class="red-text">*</span></label>
+        </div>
+      </div>
+      <div class="row">
         <div class="input-field col l4 s12">
           <select>
             <option selected value="1">I раздел</option>
             <option value="2">II раздел</option>
           </select>
-          <label>Раздел</label>
+          <label>Раздел <span class="red-text">*</span></label>
         </div>
-        <div class="input-field col l2 s12">
-          <select>
-            <option value="1">Добавить</option>
-            <option selected value="2">1</option>
-            <option value="3">2</option>
-          </select>
-          <label>Группа</label>
-        </div>
-        <div class="input-field col l2 s12">
-          <input required id="group" type="text" class="validate">
-          <label for="group">Группа</label>
-          <span class="helper-text" data-error="Введите группу"></span>
-        </div>
-        <div class="input-field col l4 s12">
-          <input required id="price" type="text" class="validate">
-          <label for="price">Стоимость</label>
-          <span class="helper-text" data-error="Введите стоимость"></span>
-        </div>
-      </div>
-      <div class="row">
         <div class="input-field col l2 s12">
           <input required id="code_kind" type="text" class="validate">
           <label for="code_kind">Код</label>
           <span class="helper-text" data-error="Введите код"></span>
         </div>
-        <div class="input-field col l10 s12">
+        <div class="input-field col l2 s12">
+          <input required id="group" type="text" class="validate">
+          <label for="group">Группа <span class="red-text">*</span></label>
+          <span class="helper-text" data-error="Введите группу"></span>
+        </div>
+        <div class="input-field col l4 s12">
+          <input required id="price" type="text" class="validate">
+          <label for="price">Стоимость <span class="red-text">*</span></label>
+          <span class="helper-text" data-error="Введите стоимость"></span>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s12">
           <textarea required id="name_kind" class="materialize-textarea validate"></textarea>
-          <label for="name_kind">Наименование</label>
+          <label for="name_kind">Наименование <span class="red-text">*</span></label>
           <span class="helper-text" data-error="Введите наименование"></span>
         </div>
       </div>
@@ -249,22 +272,22 @@
         <div class="col s3" style="padding: 0 0.1rem">
           <p class="center" style="color: #37474f"><b>Вид</b></p>
           <div class="collection">
-            <a href="#kind" class="modal-trigger collection-item active">01.00.1.002 - Микрохирургические и
+            <a href="#kind" class="modal-trigger collection-item active">1.002 - Микрохирургические и
               реконструктивно-пластические операции на печени, желчных протоках и сосудах печени, в том числе
               эндоваскулярные операции на сосудах печени и реконструктивные операции на сосудах системы воротной вены,
               стентирование внутри- и внепеченочных желчных протоков(01.01.2019-31.12.2019) <br> (Хирургическое
               лечение)</a>
-            <a href="#kind" class="modal-trigger collection-item">01.00.1.002 - Микрохирургические и
+            <a href="#kind" class="modal-trigger collection-item">1.002 - Микрохирургические и
               реконструктивно-пластические операции на печени, желчных протоках и сосудах печени, в том числе
               эндоваскулярные операции на сосудах печени, и реконструктивные операции на сосудах системы воротной вены,
               стентирование внутри- и внепеченочных желчных протоков(01.01.2019-31.12.2019) <br> (Хирургическое
               лечение)</a>
-            <a href="#kind" class="modal-trigger collection-item">01.00.1.002 - Микрохирургические и
+            <a href="#kind" class="modal-trigger collection-item">1.002 - Микрохирургические и
               реконструктивно-пластические операции на печени, желчных протоках и сосудах печени, в том числе
               эндоваскулярные операции на сосудах печени и реконструктивные операции на сосудах системы воротной вены,
               стентирование внутри- и внепеченочных желчных протоков(01.01.2019-31.12.2019) <br> (Хирургическое
               лечение)</a>
-            <a href="#kind" class="modal-trigger collection-item">01.00.1.002 - Микрохирургические и
+            <a href="#kind" class="modal-trigger collection-item">1.002 - Микрохирургические и
               реконструктивно-пластические операции на печени, желчных протоках и сосудах печени, в том числе
               эндоваскулярные операции на сосудах печени, и реконструктивные операции на сосудах системы воротной вены,
               стентирование внутри- и внепеченочных желчных протоков(01.01.2019-31.12.2019) <br> (Хирургическое

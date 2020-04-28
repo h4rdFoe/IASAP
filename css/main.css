@@ -1,3 +1,11 @@
+.input-field {
+  margin-bottom: 0px;
+}
+
+.row {
+margin-bottom: 0px;
+}
+
 body {
     background: url(background-5.svg);
     background-size: 100%;
@@ -28,6 +36,7 @@ i.medium {
   border-radius: 2px;
   margin-left: auto;
   margin-right: auto;
+  margin-bottom: 20px;
 }
 
 #search tbody tr:hover {

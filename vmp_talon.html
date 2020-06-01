@@ -1,0 +1,207 @@
+<!doctype html>
+
+<html lang="ru">
+
+<head>
+  <!--Import Google Icon Font-->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <!--Import materialize.css-->
+  <link type="text/css" rel="stylesheet" href="css/materialize.css" media="screen,projection" />
+  <!--Let browser know website is optimized for mobile-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="css/main.css">
+  <meta charset="utf-8">
+  <title>Административная панель</title>
+  <link rel="icon" type="image/x-icon" href="img/logo-langing.ico">
+</head>
+
+<body>
+
+  <!-- Модальное окно для Расширенного поиска пациента -->
+  <div id="patient" class="modal">
+    <div class="modal-content">
+      <h6>Выбор пациента</h6>
+      <hr>
+      <div class="row">
+        <div class="input-field col l2 s12">
+          <input type="text">
+          <label>ID</label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col l6 s12">
+          <input type="text">
+          <label>Фамилия</label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col l6 s12">
+          <input type="text">
+          <label>СНИЛС</label>
+        </div>
+      </div>
+    </div>
+    <div class="modal-footer">
+      <a href="#!" class="modal-close waves-effect waves-green btn-flat">Отмена</a>
+      <a href="#!" class="modal-close waves-effect waves-green btn-flat">Поиск</a>
+    </div>
+  </div>
+
+    <nav style="margin-bottom: 12px">
+      <div class="nav-wrapper blue-grey darken-3">
+        <a class="breadcrumb">ВМП</a>
+        <a href="#" class="breadcrumb">Управление талонами</a>
+        <a href="">
+          <div class="alink brand-logo right">
+            <span><b>IASAP</b></span>
+            <img class="right logo-egisz" src="img/logo.png">
+          </div>
+        </a>
+        <a href="#" data-target="slide-out" class="alink sidenav-trigger"><i class="medium material-icons">memory</i></a>
+      </div>
+    </nav>
+
+  <ul id="slide-out" class="sidenav"> 
+    <li>
+      <div class="user-view">
+        <div class="background blue-grey darken-3"></div>
+        <a href="#name"><span class="white-text name">Петров П.П.</span></a>
+        <a href="" class="white-text right tooltipped" data-tooltip="Выйти"><i
+            class="material-icons">exit_to_app</i></a>
+        <a href="#email"><span class="white-text email">petrov@gmail.com</span></a>
+      </div>
+    </li>
+    <li><a class="dropdown-trigger" href="#!" data-target="dropdown1"><i class="material-icons">language</i>Стенд<i
+          class="material-icons right">arrow_drop_down</i></a></li>
+    <ul id='dropdown1' class='dropdown-content'>
+      <li><a href="#!">DEV</a></li>
+      <li><a href="#!">TEST</a></li>
+      <li><a href="#!">PROD</a></li>
+    </ul>
+
+    <li><a href="dictionary.html">Справочники</a></li>
+    <li><a href="#!">Мониторинг</a></li>
+    
+    <ul class="collapsible">
+      <li>
+        <div class="collapsible-header"><i class="material-icons">grain</i>ВМП</div>
+        <div class="collapsible-body">
+          <ul>
+          <li><a href="vmp_pgg.html">Управление ПГГ</a></li>
+          <li><a href="vmp_talon.html">Управление талонами</a></li>
+          </ul>
+        </div>
+      </li>
+      <li>
+        <div class="collapsible-header"><i class="material-icons">grain</i>СКЛ</div>
+        <div class="collapsible-body"> Пока пусто
+        </div>
+      </li>
+      <li>
+        <div class="collapsible-header"><i class="material-icons">grain</i>ДС</div>
+        <div class="collapsible-body"> Пока пусто
+        </div>
+      </li>
+    </ul>
+  </ul>
+
+<!--Основной блок-->
+<div class="row mobile_margin">
+  <div class="z-depth-2 main_content col l11 s12 push-l0" style="padding-bottom: 30px">
+      <div class="row" >
+        <div class="col s12 blue-grey-text text-darken-3">
+          <h6><b>Изменение талонов</b></h6>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col l8 s12">
+          <form action="#">
+            <div class="file-field input-field">
+              <div class="btn-small orange">
+                <span>Выбрать</span>
+                <input type="file">
+              </div>
+              <div class="file-path-wrapper">
+                <input type="text" class="file-path validate" placeholder="Выберите Excel файл">
+              </div>
+            </div>
+          </form>
+        </div>
+        <div class="input-field col l4 s12" style="margin-top: 40px">
+          <a onclick="M.toast({html: 'Excel файл загружен'})" class="waves-effect waves-light btn-small orange">Загрузить</a>
+        </div>
+      </div>  
+      <div class="row">
+        <div class="input-field col l4 s12">
+          <select>
+            <option value="1">Вернуть на 1 этап</option>
+            <option value="2">Вернуть на 2 этап</option>
+            <option value="3">Вернуть на 3 этап</option>
+            <option value="4">Вернуть на 4 этап</option>
+            <option value="5">Вернуть на 5 этап</option>
+            <option value="6">Заблокировать</option>
+            <option value="7">Разблокировать</option>
+          </select>
+          <label>Выберите действие:</label>
+        </div>
+        <div class="input-field col l4 s12" style="margin-top: 30px">
+          <a onclick="M.toast({html: 'Действие принято'})" class="waves-effect waves-light btn-small orange">Применить</a>
+        </div>
+      </div>
+      <div class="row"> 
+        <div class="input-field col l12 s12" style="margin-top: 30px">
+          <a onclick="M.toast({html: 'Изменения сохранены'})" class="waves-effect waves-light btn-small orange"><i class="material-icons left">save</i>Сохранить</a>
+        </div>
+      </div>
+      <div class="row"> 
+        <div class="col s12">
+          <ul class="collapsible">
+            <li>
+              <div class="collapsible-header">Ответ от сервера</div>
+              <div class="collapsible-body"><span style="font-family: Verdana">Тут какой-то ответ</span></div>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <hr>
+      <div class="row">
+        <div class="col s12 blue-grey-text text-darken-3">
+          <h6><b>Перепривязка талонов</b></h6>
+        </div>
+      </div>
+          <div class="row">
+            <div class="input-field col l3 s12">
+              <input type="text" id="autocomplete-input" class="autocomplete">
+              <label>Пациент</label>
+            </div>
+            <div class="input-field col l2 s12" style="margin-top: 30px">
+              <a href="#patient" class="modal-trigger collection-item center waves-effect waves-light btn-small orange tooltipped" data-tooltip="Выбор пациента"><i class="material-icons">search</i></a>
+            </div>
+            <div class="input-field col l3 s12">
+              <input type="text">
+              <label>Талон</label>
+            </div>
+            <div class="input-field col l2 s12" style="margin-top: 30px">
+              <a onclick="M.toast({html: 'Талон проверен'})" class="waves-effect waves-light btn-small orange tooltipped" data-tooltip="Проверить талон"><i class="material-icons">done</i></a>
+            </div>
+            <div class="input-field col l2 s12" style="margin-top: 30px">
+              <a onclick="M.toast({html: 'Запись добавлена'})" class="waves-effect waves-light btn-small orange tooltipped" data-tooltip="Добавить запись"><i class="material-icons">add</i></a>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="input-field col l12 s12" style="margin-top: 30px">
+              <a onclick="M.toast({html: 'Изменения сохранены'})" class="waves-effect waves-light btn-small orange"><i class="material-icons left">save</i>Сохранить</a>
+            </div>
+          </div>
+  </div>
+</div>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+      integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <!--JavaScript at end of body for optimized loading-->
+    <script type="text/javascript" src="js/materialize.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+</body>
+
+</html>

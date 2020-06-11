@@ -20,7 +20,7 @@
   <!-- Модальное окно для Расширенного поиска пациента -->
   <div id="patient" class="modal">
     <div class="modal-content">
-      <h6>Выбор пациента</h6>
+      <h6>Поиск пациента</h6>
       <hr>
       <div class="row">
         <div class="input-field col l2 s12">
@@ -145,7 +145,7 @@
           <label>Выберите действие:</label>
         </div>
         <div class="input-field col l4 s12" style="margin-top: 30px">
-          <a onclick="M.toast({html: 'Действие принято'})" class="waves-effect waves-light btn-small orange">Применить</a>
+          <a onclick="M.toast({html: 'Действие принято'})" class="waves-effect waves-light btn-small orange tooltipped" data-tooltip="Проверить действие">Проверить</a>
         </div>
       </div>
       <div class="row"> 
@@ -170,28 +170,42 @@
         </div>
       </div>
           <div class="row">
-            <div class="input-field col l3 s12">
-              <input type="text" id="autocomplete-input" class="autocomplete">
+            <div class="input-field col l5 s12">
+              <input placeholder="Фамилия Имя Отчество (СНИЛС: ХХХХХХХХХХХ)" type="text">
               <label>Пациент</label>
             </div>
-            <div class="input-field col l2 s12" style="margin-top: 30px">
-              <a href="#patient" class="modal-trigger collection-item center waves-effect waves-light btn-small orange tooltipped" data-tooltip="Выбор пациента"><i class="material-icons">search</i></a>
+            <div class="input-field col l1 s12" style="margin-top: 30px">
+              <a href="#patient" class="modal-trigger collection-item center waves-effect waves-light btn-small orange tooltipped" data-tooltip="Добавить пациента">Добавить</a>
             </div>
             <div class="input-field col l3 s12">
-              <input type="text">
+              <input placeholder="XX.XXXX.XXXXX.XXX" type="text" class="validate">
               <label>Талон</label>
             </div>
-            <div class="input-field col l2 s12" style="margin-top: 30px">
-              <a onclick="M.toast({html: 'Талон проверен'})" class="waves-effect waves-light btn-small orange tooltipped" data-tooltip="Проверить талон"><i class="material-icons">done</i></a>
-            </div>
-            <div class="input-field col l2 s12" style="margin-top: 30px">
-              <a onclick="M.toast({html: 'Запись добавлена'})" class="waves-effect waves-light btn-small orange tooltipped" data-tooltip="Добавить запись"><i class="material-icons">add</i></a>
+
+            <div class="input-field col l1 s12" style="margin-top: 30px">
+              <a class="waves-effect waves-light btn-small orange tooltipped" data-tooltip="Добавить запись"><i class="material-icons">add</i></a>
             </div>
           </div>
 
           <div class="row">
-            <div class="input-field col l12 s12" style="margin-top: 30px">
+
+            <div class="input-field col l1 m12 s12" style="margin-top: 30px">
+              <a onclick="M.toast({html: 'Талон проверен'})" class="waves-effect waves-light btn-small orange tooltipped" data-tooltip="Проверить талоны">Проверить</a>
+            </div>
+
+            <div class="input-field col l11 m12 s12" style="margin-top: 30px">
               <a onclick="M.toast({html: 'Изменения сохранены'})" class="waves-effect waves-light btn-small orange"><i class="material-icons left">save</i>Сохранить</a>
+            </div>
+          </div>
+
+          <div class="row"> 
+            <div class="col s12">
+              <ul class="collapsible">
+                <li>
+                  <div class="collapsible-header">Ответ от сервера</div>
+                  <div class="collapsible-body"><span style="font-family: Verdana">Тут какой-то ответ</span></div>
+                </li>
+              </ul>
             </div>
           </div>
   </div>
